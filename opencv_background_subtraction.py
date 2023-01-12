@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 as cv
 cap = cv.VideoCapture('C:/Users/evig0/OneDrive/Desktop/research/opencv-4.x/samples/data/vtest.avi')
-fgbg = cv.createBackgroundSubtractorKNN(detectShadows=False)
+fgbg = cv.bgsegm.createBackgroundSubtractorMOG()
 while True:
     ret, frame = cap.read()
     if frame is None:
